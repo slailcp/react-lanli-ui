@@ -1,0 +1,22 @@
+{
+  "name": "react-lanli-ui",
+  "version": "0.0.1",
+  "description": "react-lanli-ui",
+  "main": "./package/index.ts",
+  "keywords":["react-lanli-ui"],
+  "author":"shenlanlan",
+  "private": false,
+  "license":"MIT",
+"repository": {
+    "type": "git",
+    "url": "git+https://github.com/slailcp/react-lanli-ui.git"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+   
+  },
+  "devDependencies": {
+   
+  }
+}
