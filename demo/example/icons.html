@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICON</title>
+  <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+  <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+  <!-- <script src="../reactjs/prop-types.js"></script> -->
+  <script src="../../dist/lanli-ui.js?v=4"></script>
+  <style>
+    .icon-box {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .icon-span {
+      width: 25%;
+      padding: 10px 0;
+      font-size: 12px;
+      text-align: center;
+      box-shadow: 0 0 1px #bdd0f5;
+      box-sizing: border-box;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body style="padding:20px;">
+  <div id="app"></div>
+</body>
+<script type="text/babel">
+  console.log(lanliUI);
+  class App extends React.Component {
+
+    open() {
+      lanliUI.Toast.show({
+        type: "loading",
+        message: 'ddddd'
+      })
+    }
+
+    open1() {
+      lanliUI.Toast.show({
+        message: 'ddddd'
+      })
+    }
+
+
+    render() {
+      return (
+        <div>
+          <div className="icon-box">
+            <lanliUI.NavBar onBack={() => { alert(0) }}>
+              列表页
+              <lanliUI.IconWarningFilled />
+            </lanliUI.NavBar>
+          </div>
+          <div className="btn-box">
+            <div className="popup-show">
+              <button className="btn" onClick={() => { this.open() }}>loading</button><br />
+              <button className="btn" onClick={() => { this.open1() }}>msg</button><br />
+            </div>
+          </div>
+        </div>
+      )
+    }
+  }
+
+  ReactDOM.render(<App />, document.getElementById('app'));
+</script>
+
+</html>
